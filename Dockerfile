@@ -24,6 +24,6 @@ VOLUME /app/stable-diffusion-webui/localizations
 EXPOSE 8080
 
 ENV PYTORCH_CUDA_ALLOC_CONF=garbage_collection_threshold:0.9,max_split_size_mb:512
-
+ENV TORCH_COMMAND="pip3 install torch torchvision torchaudio"
 ENTRYPOINT ["/app/entrypoint.sh", "--update-check", "--xformers", "--listen", "--port", "8080"]
 # CMD ["--medvram"]
