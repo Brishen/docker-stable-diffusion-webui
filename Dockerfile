@@ -28,7 +28,7 @@ ENV TORCH_COMMAND="pip install torch torchvision torchaudio"
 
 RUN python3 -m venv /app/stable-diffusion-webui/venv && \
     source /app/stable-diffusion-webui/venv/bin/activate && \
-    pip install -r /app/stable-diffusion-webui/requirements_versions.txt &&
+    pip install -r /app/stable-diffusion-webui/requirements_versions.txt && \
     pip install fairscale
     
 ENTRYPOINT ["/app/entrypoint.sh", "--update-check", "--xformers", "--allow-code", "--enable-insecure-extension-access", "--listen", "--port", "8080"]
