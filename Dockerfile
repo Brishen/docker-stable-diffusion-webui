@@ -28,6 +28,7 @@ ENV TORCH_COMMAND="pip install torch torchvision torchaudio"
 
 RUN python3 -m venv /app/stable-diffusion-webui/venv && \
     . /app/stable-diffusion-webui/venv/bin/activate && \
+    pip install wheel && \
     pip install -r /app/stable-diffusion-webui/requirements_versions.txt && \
     pip install fairscale
     
