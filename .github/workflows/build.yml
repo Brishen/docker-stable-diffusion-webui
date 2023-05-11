@@ -60,7 +60,8 @@ jobs:
           tags: |
             type=schedule,pattern=nightly-{{date 'YYYYMMDDhhmmss'}}
             type=schedule,pattern=latest
-            type=sha,format=short
+            type=sha,format=latest
+          # type=sha,format=short
 
       # Build and push Docker image with Buildx (don't push on PR)
       # https://github.com/docker/build-push-action
