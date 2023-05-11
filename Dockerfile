@@ -25,5 +25,5 @@ EXPOSE 8080
 
 ENV PYTORCH_CUDA_ALLOC_CONF=garbage_collection_threshold:0.9,max_split_size_mb:512
 ENV TORCH_COMMAND="pip install torch torchvision torchaudio"
-ENTRYPOINT ["/app/entrypoint.sh", "--update-check", "--xformers", "--allow-code", "--listen", "--port", "8080"]
+ENTRYPOINT ["/app/entrypoint.sh", "--update-check", "--xformers", "--allow-code", "--enable-insecure-extension-access", "--listen", "--port", "8080"]
 # CMD ["--medvram"]
