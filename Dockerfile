@@ -3,7 +3,7 @@ FROM nvidia/cuda:11.7.1-base-ubuntu22.04
 COPY entrypoint.sh /app/entrypoint.sh
 
 RUN apt update && \
-    apt install -y python3 python3-pip python3-venv git wget libgl1-mesa-dev libglib2.0-0 libsm6 libxrender1 libxext6 && \
+    apt install -y python3 python3-pip python3-venv python3-wheel git wget libgl1-mesa-dev libglib2.0-0 libsm6 libxrender1 libxext6 && \
     rm -rf /var/lib/apt/lists/* && \
     groupadd -g 1000 sdgroup && \
     useradd -m -s /bin/bash -u 1000 -g 1000 --home /app sduser && \
