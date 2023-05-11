@@ -26,7 +26,7 @@ EXPOSE 8080
 ENV PYTORCH_CUDA_ALLOC_CONF=garbage_collection_threshold:0.9,max_split_size_mb:512
 ENV TORCH_COMMAND="pip install torch torchvision torchaudio"
 
-RUN python -m venv /app/stable-diffusion-webui/venv && \
+RUN python3 -m venv /app/stable-diffusion-webui/venv && \
     source /app/stable-diffusion-webui/venv/bin/activate && \
     pip install -r requirements_versions.txt
     
